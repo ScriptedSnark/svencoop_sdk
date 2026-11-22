@@ -1824,8 +1824,8 @@ void CWeaponBox :: KeyValue( KeyValueData *data )
 
 	if ( m_cAmmoTypes >= MAX_AMMO_SLOTS )
 	{
-		ALERT( at_console, (char *)( alias ? "WeaponBox too full! Only %d ammo types allowed (X%f Y%f Z%f)\n"
-		                                   : "WeaponBox too full! Only %d ammo types allowed at (X%f Y%f Z%f)\n" ),
+		ALERT( at_console, alias ? "WeaponBox too full! Only %d ammo types allowed (X%f Y%f Z%f)\n"
+		                        : "WeaponBox too full! Only %d ammo types allowed at (X%f Y%f Z%f)\n",
 		       MAX_AMMO_SLOTS, pev->origin.x, pev->origin.y, pev->origin.z );
 		return;
 	}

@@ -34,7 +34,7 @@ void ASPrintVariable(void *file, int typeId, void *address, const char *name)
 				g_pFileSystem->FPrintf(file, "%s = <null>\n", name);
 		}
 		else if (typeId & (asTYPEID_APPOBJECT | asTYPEID_SCRIPTOBJECT))
-			g_pFileSystem->FPrintf(file, (char *)(address ? "%s = {...}\n" : "%s = <null>\n"), name);
+			g_pFileSystem->FPrintf(file, address ? "%s = {...}\n" : "%s = <null>\n", name);
 
 		return;
 	}
