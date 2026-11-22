@@ -1536,7 +1536,7 @@ void CBaseTrigger :: MultiWaitOver( void )
 //
 void CounterMessage( CBaseEntity *pActivator, const char *pszMessage )
 {
-	ALERT( at_console, pszMessage );
+	ALERT( at_console, "%s", pszMessage );
 
 	if ( pActivator->IsPlayer() && pActivator->IsNetClient() )
 	{

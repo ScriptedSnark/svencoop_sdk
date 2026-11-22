@@ -1362,7 +1362,8 @@ void CommandNodePath( void )
 	int end = atoi( CMD_ARGV( 2 ) );
 	bool found = WorldGraph.FindShortestPath( path, start, end, NODE_HUMAN_HULL, NODE_PATH_CAPS ) != 0;
 
-	ALERT( at_console, found ? "Success: start %d, end %d\n" : "Failure: start %d, end %d\n", start, end );
+	ALERT( at_console, (char *)( found ? "Success: start %d, end %d\n"
+	                                   : "Failure: start %d, end %d\n" ), start, end );
 }
 
 void CommandRemove( void )
